@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*문제1.메뉴가 밑으로 내려감 문제2.슬라이딩이미지가 제대로안됨*/
+/*======전체스타일=====*/
+* {
+	font-family:"맑은 고딕", "바탕";
+	margin:0 auto;
+	padding:0;
+	}
+ul {
+	list-style:none;
+	}	
+a {
+	text-decoration:none;
+	color:inherit;
+	display:block; /*손가락 클릭 범위가 넓어짐.*/
+	}	
+body {
+	background:#fff;
+	color:#333;
+	}	
+/*======레이아웃=====*/
+.container {
+	width:1200px;
+	}
+header {
+	height:100px;
+	background:#3a4e3b;
+	}
+.imgslide{
+	background:rgba(102,102,102,0.5);
+	width:1200px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	}
+.contents {
+	height:200px;
+	}	
+footer {
+	height:100px;
+	background:rgba(51,51,51,1);}
+/*======헤더=====*/
+.logo {
+	width:200px;
+	float:left;
+	margin-top:30px;
+	}
+nav {
+	width:800px;
+	float:right;
+	position:relative;
+	margin-top:57px;
+	margin-right:15px;
+	font-weight:bold;
+	}
+.navi>li {
+	width:200px;
+	text-align:center;
+	float:left;
+	position:relative;
+	transition:all 0.4s;
+	color:rgba(204,204,204,1);
+	}
+
+.navi li a {
+	padding:10px 0;}		
+.navi>li div {
+	border:1px solid #000;
+	margin-right:-1px;
+	} 	
+.navi>li:hover {
+	background:#3a5e4b;
+	color:#fff;} 
+
+.submenu {
+	width:100%;
+	position:absolute;
+	z-index:33;
+	background:rgba(255,255,255,0.5);
+	color:#3a4e3b;	
+	display:none;
+	}
+.submenu>li:hover {
+	background:#fff;
+	color:#000;	
+	}	
+.submenu>li {
+	transition:all 0.4s;}	
+
+		
+/*======이미지슬라이딩=====*/
+.imgslide>a {
+	position:absolute;
+	transition:all 3s;
+	overflow:hidden;
+	left:0;
+	top:0;
+	}
+/*이부분이 빠지면 이미지 슬라이딩이 제대로 작동하지 않음!!!포지셔 제대로 줄 것!*/	
+.imgslide>img {
+	width:100%;
+	}	
+/*======콘텐츠=====*/
+.contents>div {
+	width:390px;
+	height:180px;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:8px;
+	}
+.cont1 {
+	}
+.tab1 ul li , .tab2 ul li{
+	width:100px;
+	height:20px;
+	text-align:center;
+	background:rgba(204,204,204,1);
+	float:left;
+	padding-top:5px;
+	padding-bottom:10px;
+	border: 1px solid #333;
+	font-weight:bold;
+	border-bottom:none;
+	}
+.notice ul li{
+	width:380px;
+	padding-top:10px;
+	}
+.notice ul li:hover {
+	font-weight:bold;
+	}
+		
+.tab1 ul , .tab2 ul {
+	overflow:hidden;
+	}	
+.ss {
+	float:right;}
+.notice , .gallery {
+	width:390px;
+	height:140px;
+	border:1px solid #000;
+	background:#fff;
+	margin-left:-5px;}	
+.cont2 {
+	}	
+.gallery ul li {
+	display:inline-block;
+	margin-top:24px;
+	margin-left:28px;
+	}
+.gallery ul li:hover {
+	opacity:0.5;
+	}		
+.cont3 {
+	overflow:hidden;
+	position:relative;
+	}
+.cont3:hover {
+	opacity:0.5;
+	}	
+.bntext {
+	width:300px;
+	height:40px;
+	background:rgba(153,153,153,0.9);
+	background:rgba(255,255,255,0.7);
+	position:absolute;
+	top:70px;
+	left:50px;
+	text-align:center;
+	line-height:40px;
+	}	
+	
+/*======푸터=====*/
+footer>div{
+	float:left;
+	height:100px;
+	}
+.foot1 {
+	width:200px;
+	height:40px;
+	margin-top:35px;
+	}
+.foot2 {
+	width:800px;
+	text-align:center;
+	line-height:130px;
+	color:rgba(204,204,204,1);
+	}
+.foot3 {
+	width:200px;
+	}
+.dd {
+	float:right;
+	margin-right:10px;
+	margin-top:35px;
+	background:#3a4e3b;
+	color:#fff;
+	width:200px;
+	}			
+/*=====레이어팝업=====*/
+.modal {
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:99;
+	display:none;
+	}
+
+.body {
+	width:600px;
+	height:150px;
+	background:rgba(204,204,204,1);
+	margin:150px auto;
+	}	
+.button {
+	text-align:center;
+	}
+button {
+	padding:5px;
+	float:right;
+		}	
